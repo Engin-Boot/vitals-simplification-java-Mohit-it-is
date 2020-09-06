@@ -1,4 +1,4 @@
-package Vitals;
+package vitals;
 import java.util.HashMap;
 import java.util.Map;
 

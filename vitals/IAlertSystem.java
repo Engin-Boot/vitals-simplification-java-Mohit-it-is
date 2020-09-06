@@ -1,4 +1,4 @@
-package Vitals;
+package vitals;
 
 public interface IAlertSystem {
 	public void sound_alarm(String[] message);

@@ -1,4 +1,4 @@
-package Vitals;
+package vitals;
 
 public class AlertService implements IAlertSystem,IReporter{
 	
