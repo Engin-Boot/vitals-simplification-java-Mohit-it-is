@@ -1,20 +1,27 @@
-package vitals;
+import java.util.Map;
 
 public class Main {
-    static boolean vitalsAreOk(float bpm, float spo2, float respRate) {
-        if(bpm < 70 || bpm > 150) {
-            return false;
-        } else if(spo2 < 90) {
-            return false;
-        } else if(respRate < 30 || respRate > 95) {
-            return false;
-        }
-        return true;
-    }
 
-    public static void main(String[] args) {
-        assert(vitalsAreOk(80, 97, 40) == true);
-        assert(vitalsAreOk(60, 98, 40) == false);
-        System.out.println("Some more tests needed");
-    }
+	public static boolean vitalsAreOk(Map<String, Integer> check_vitalvalue) {
+		VitalValidator vitalvalidator = new VitalValidator();
+		boolean flag = true;
+
+		for (Map.Entry<String, Integer> entry : check_vitalvalue.entrySet()) {
+			flag = flag && vitalvalidator.isVitalOk(entry.getKey(), entry.getValue());
+		}
+		return bool_return(flag); // bool_return is refractor to reduce cyclomatic complexity
+	}
+
+	private static boolean bool_return(boolean flag) {
+		if (flag == false) {
+			return false;
+		}
+		return true;
+	}
+
+	public static void main(String[] args) {
+		Tester test = new Tester();
+		test.testcode();
+	}
+
 }
