@@ -1,6 +1,6 @@
 package vitals;
 
-public class AlertService implements IAlertSystem,IReporter{
+public class AlertService implements IReporter{
 	
 
 	@Override
