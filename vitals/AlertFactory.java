@@ -7,7 +7,7 @@ import java.util.ResourceBundle;
 public class AlertFactory {
 	public static IReporter getAlertInstance() {
 		ResourceBundle.clearCache();
-		ResourceBundle rb = ResourceBundle.getBundle("vitals/properties/config");
+		ResourceBundle rb = ResourceBundle.getBundle("properties/config");
 		String strclass = rb.getString("cname");
 		IReporter ir = null;
 		try {
