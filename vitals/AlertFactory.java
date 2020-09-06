@@ -11,7 +11,7 @@ public class AlertFactory {
 		String strclass = rb.getString("cname");
 		IReporter ir = null;
 		try {
-			Class<?> cls = Class.forName(strclass);
+			Class cls = Class.forName(strclass);
 			ir = (IReporter)cls.getDeclaredConstructor().newInstance();
 		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException 
 				| InvocationTargetException |NoSuchMethodException e) {
