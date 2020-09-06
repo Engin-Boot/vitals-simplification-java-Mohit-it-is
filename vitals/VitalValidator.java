@@ -5,7 +5,7 @@ public class VitalValidator {
 	VitalTypes vitaltype = new VitalTypes();
 	Map<String, int[]> vitalypes = vitaltype.getMap();
 	
-	IReporter ir = AlertFactory.getAlertInstance();
+	IReporter ir = AlertFactory.getAlertInstance(); // AlertFacotry.getAlertInstance() not working due to import error
 	
 	public boolean isVitalOk(String vital_type, Integer check_value) {
 		int[] range = vitalypes.get(vital_type);
