@@ -13,8 +13,7 @@ public class AlertFactory {
 		try {
 			Class cls = Class.forName(strclass);
 			ir = (IReporter)cls.newInstance();
-		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException 
-				| InvocationTargetException |NoSuchMethodException e) {
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
 			e.printStackTrace();
 		}
 		return ir;
